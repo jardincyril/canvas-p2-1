@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>glace</title>
+    <style media="screen">
+      html, body { height: 100%; width: 100%; margin: 0; padding: 0; background-color: lightgrey; text-align: center;}
+      #glace { border: 1px solid black; margin: 15% auto; background-color: white;}
+    </style>
+  </head>
+  <body>
+    <canvas id="glace" width="400" height="400"></canvas>
+    <script>
+    var c = document.getElementById('glace')
+    var ctx = c.getContext("2d")
+    //boule de glace
+    ctx.beginPath();
+    ctx.moveTo(150,150);
+    ctx.quadraticCurveTo(190,60,220,150);
+    ctx.closePath();
+    ctx.fillStyle = "#8A0908";
+    ctx.fill();
+    //corne de glace
+    ctx.beginPath();
+    ctx.moveTo(220,150);
+    ctx.lineTo(150,150);
+    ctx.lineTo(185,250);
+    ctx.closePath();
+    ctx.fillStyle = "#AA6522";
+    ctx.fill();
+    </script>
+  </body>
+</html>
